@@ -1,111 +1,127 @@
 # Fintrix
 
-Fintrix is an educational project focused on building a full-stack personal finance management application. Conceived as my first fully architected end-to-end portfolio project, it captures the full process of designing and implementing a modern application: from initial product definition to deploying a React frontend and an Express backend powered by SQLite.
+**Fintrix** is a full-stack personal finance management application designed to bridge the gap between robust backend logic and modern, responsive frontend interactivity.
 
-![React](https://img.shields.io/badge/Frontend-React-blue)
-![Express](https://img.shields.io/badge/Backend-Express-green)
-![SQLite](https://img.shields.io/badge/Database-SQLite-lightgrey)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow)
-![AI Collaboration](https://img.shields.io/badge/AI%20Assisted-ChatGPT-blue)
+This project serves as a **capstone implementation** of clean architecture principles, demonstrating an end-to-end development workflow—from database schema design in SQLite to a component-based UI in React.
 
-## Educational purpose
+![React](https://img.shields.io/badge/Frontend-React-blue?style=flat-square)
+![Express](https://img.shields.io/badge/Backend-Express-green?style=flat-square)
+![SQLite](https://img.shields.io/badge/Database-SQLite-lightgrey?style=flat-square)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)
+![Workflow](https://img.shields.io/badge/Workflow-AI_Augmented-blueviolet?style=flat-square)
 
-- **Comprehensive learning:** serves as a lab to practice client/server architecture, reusable component design, and data persistence.  
-- **Good practices from day one:** the project includes linting configuration, Vitest-based testing, and layered separation to encourage professional habits.  
-- **Process documentation:** the project tracks decisions, iterations, and refinements to mirror how a real-world development workflow evolves over time.
+---
 
-## AI in the process
+## 🎯 Engineering Goals
 
-Artificial intelligence was involved throughout the workflow: ideation, drafting initial copy, structuring the codebase, and reviewing changes. The goal is to show how human judgment can be combined with AI tools to speed up technical decisions, author documentation, and obtain continuous feedback. Each iteration is versioned to highlight the role of AI in the development.
+Instead of a simple "Hello World," Fintrix was engineered to establish a baseline for scalable web applications:
 
-Artificial intelligence supported various stages of the workflow: ideation, initial copywriting, early structural decisions, and iterative refinement.
-The goal was to combine AI-assisted exploration with manual technical judgment, using AI to accelerate clarity, improve documentation, and reflect on alternatives &mdash; always under human supervision and with full responsibility for implementation choices.
+- **Architectural Rigor:** Implementation of a layered architecture (separation of concerns between UI, Business Logic, and Data Persistence).
+- **Modern Standards:** Utilization of functional components, hooks, and strict linting/formatting (ESLint/Prettier) to ensure code quality.
+- **Production-Grade Workflow:** Simulating a real-world environment with version control strategies, documentation, and continuous iterative refinement.
 
-## Current features
+## 🤖 AI-Augmented Workflow
 
-- Frontend built with **React + Vite** and styled with **Tailwind CSS**.  
-- Navigation through key sections (landing page and themed pages) via a responsive header.  
-- Footer describing Fintrix’s purpose plus legal notice.  
-- Backend in **Express** that exposes REST endpoints to create, list, and delete expenses stored in **SQLite**.  
-- Initial database `expenses.db` ready to use during development.
+This project leverages Artificial Intelligence as a **governed force multiplier**, not a replacement for engineering judgment.
 
-## Architecture
+- **Role of AI:** Accelerated boilerplate generation, documentation drafting, and rapid prototyping of UI layouts.
+- **Human Oversight:** All architectural decisions, logic verification, and code reviews were performed manually to ensure security and efficiency.
+- **Outcome:** This workflow demonstrates how modern engineers can use AI tools to reduce friction and focus on high-level problem solving.
 
+## ⚡ Key Features
+
+- **Responsive UI:** Built with **React + Vite** and styled with **Tailwind CSS** for a mobile-first experience.
+- **RESTful API:** A robust **Express** backend handling CRUD operations with validated endpoints.
+- **Persistence:** Lightweight yet powerful data management using **SQLite**, optimized for local development and portability.
+- **Scalable Structure:** Modular file organization (`/components`, `/pages`, `/routes`, `/controllers`) facilitating future feature expansion.
+## 🏗️ Architecture Overview
+
+The system follows a classic client-server model, ensuring a clear **separation of concerns** between the presentation (React) and the business/persistence layers (Express/SQLite).
+
+```tree
+root/
+├── frontend/                     # React Single Page Application (Vite)
+│   ├── src/components/           # Reusable UI atoms and molecules
+│   ├── src/pages/                # View logic, handles state and routing
+│   └── src/services/             # API integration layer (interacts with the backend)
+├── backend/                      # Express API
+│   ├── routes/                   # Endpoint definitions and request handling
+│   ├── controllers/              # Business logic (processes requests)
+│   └── db/                       # Database connection, schema, and setup (SQLite)
+└── LICENSE                       # MIT License file
 ```
-frontend/   → React application built with Vite
-backend/    → Express API + SQLite
-LICENCE     → Project MIT licence
-```
 
-- Communication happens through HTTP requests (`/api/expenses`).  
-- Modular structure is favored (`components/`, `layouts/`, `pages/`, `config/`).  
-- The backend owns the business logic and persistence in SQLite.
+## ✨ Prerequisites
 
-## Prerequisites
+Before getting started, ensure you have the following installed:
 
-- Node.js 20 or higher.  
-- npm 10 or higher.  
+* **Node.js 20 or higher.**
+* **npm 10 or higher.**
 
-> 💡 Each package (frontend and backend) manages its own dependencies, so installation must be run in both directories.
+> 💡 **Note:** Each package (`frontend` and `backend`) acts as a separate logical unit. Installation must be run within both directories.
 
-## Getting started
+## 🚀 Getting Started
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/fintrix.git
-   cd fintrix
-   ```
+1.  **Clone the repository**
+    ```bash
+    git clone [https://github.com/CarlosFdeezz/fintrix.git](https://github.com/CarlosFdeezz/fintrix.git)
+    cd fintrix
+    ```
 
-2. **Install dependencies**
-   ```bash
-   cd backend
-   npm install
-   cd ../frontend
-   npm install
-   ```
+2.  **Install dependencies**
+    ```bash
+    cd backend
+    npm install
+    cd ../frontend
+    npm install
+    ```
 
-3. **Start the API (port 3001 by default)**
-   ```bash
-   cd backend
-   node index.js
-   ```
+3.  **Start the API** (port 3001 by default)
+    ```bash
+    cd backend
+    node index.js
+    ```
 
-4. **Run the frontend in development mode (port 5173 by default)**
-   ```bash
-   cd frontend
-   npm run dev
-   ```
+4.  **Run the frontend in development mode** (port 5173 by default)
+    ```bash
+    cd frontend
+    npm run dev
+    ```
 
-5. **Open the browser at** `http://localhost:5173` and start exploring Fintrix.
+5.  **Open the browser at** `http://localhost:5173` and start exploring Fintrix.
 
-## Useful scripts
+## 🔧 Useful Scripts
 
 ### Backend
-- `node index.js`: starts the Express server and creates the database if it does not exist.
+* `node index.js`: starts the Express server and creates the database if it does not exist.
 
 ### Frontend
-- `npm run dev`: development server with hot reload.  
-- `npm run build`: generates the optimized production build.  
-- `npm run preview`: previews the local production build.  
-- `npm run lint`: runs ESLint over `.js` and `.jsx` files.  
-- `npm run test`: runs the Vitest test suite.
+* `npm run dev`: development server with hot reload.
+* `npm run build`: generates the optimized production build.
+* `npm run preview`: previews the local production build.
+* `npm run lint`: runs ESLint over `.js` and `.jsx` files.
+* `npm run test`: runs the Vitest test suite.
 
-## Suggested roadmap
+## 🗺️ Suggested Roadmap
 
-- [ ] Design a basic authentication system.  
-- [ ] Integrate visualizations (charts and reports) based on recorded expenses.  
-- [ ] Add advanced filters and data export.  
-- [ ] Prepare deployment scripts (Docker / managed services).  
-- [ ] Document technical decisions and lessons learned in every release.
+This is a living project. Future iterations will focus on scaling functionality and improving the developer experience:
 
-## Contributing
-Pull requests are welcome for educational discussions. 
-Please open an issue to propose significant changes.
+* [ ] Design a basic authentication system (e.g., JWT).
+* [ ] Integrate visualizations (charts and reports) based on recorded expenses.
+* [ ] Add advanced filters and data export (e.g., CSV/JSON).
+* [ ] Prepare deployment scripts (e.g., Docker / managed services).
+* [ ] Document technical decisions and lessons learned in every release.
 
-## License
+## 🤝 Contributing
+
+Pull requests are welcome for educational discussions. Please open an issue to propose significant changes.
+
+## 📄 License
 
 This project is licensed under the [MIT License](./LICENSE).
 
 ---
 
-Fintrix reflects my commitment to learning by building. By combining a clear educational goal with transparent AI-assisted iteration, the project highlights both architectural thinking and continuous skill development.
+<div align="center">
+  <sub>This project reflects my commitment to learning by building. Designed & Developed by <a href="https://github.com/CarlosFdeezz">Carlos Fernández Cabeza</a></sub>
+</div>
