@@ -1,127 +1,99 @@
-# Fintrix
+# ProtoPay (Legacy Prototype)
 
-**Fintrix** is a full-stack personal finance management application designed to bridge the gap between robust backend logic and modern, responsive frontend interactivity.
+**ProtoPay** is an archived full-stack technical sandbox designed to explore the integration between a modern frontend and a structured RESTful backend. It represents my foundational journey into full-stack development, prioritizing architectural rigor over feature completion.
 
-This project serves as a **capstone implementation** of clean architecture principles, demonstrating an end-to-end development workflow—from database schema design in SQLite to a component-based UI in React.
+> [!IMPORTANT]
+> **Project Status:** This repository is a **technical artifact** and is currently discontinued. It serves as a portfolio piece to demonstrate my early adoption of clean architecture, modular component design, and professional developer workflows.
 
 ![React](https://img.shields.io/badge/Frontend-React-blue?style=flat-square)
 ![Express](https://img.shields.io/badge/Backend-Express-green?style=flat-square)
 ![SQLite](https://img.shields.io/badge/Database-SQLite-lightgrey?style=flat-square)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)
-![Workflow](https://img.shields.io/badge/Workflow-AI_Augmented-blueviolet?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Educational_Archive-orange?style=flat-square)
 
 ---
 
-## 🎯 Engineering Goals
+## 💡 The "Why" Behind This Project
 
-Instead of a simple "Hello World," Fintrix was engineered to establish a baseline for scalable web applications:
+Instead of building a simple "Hello World," I engineered this project to establish a baseline for scalable web applications. My goal was to move beyond tutorials and implement industry standards from day one:
 
 - **Architectural Rigor:** Implementation of a layered architecture (separation of concerns between UI, Business Logic, and Data Persistence).
-- **Modern Standards:** Utilization of functional components, hooks, and strict linting/formatting (ESLint/Prettier) to ensure code quality.
-- **Production-Grade Workflow:** Simulating a real-world environment with version control strategies, documentation, and continuous iterative refinement.
+- **Modern Standards:** Utilization of functional components, hooks, and strict linting (ESLint/Prettier) to ensure code quality.
+- **Engineering Mindset:** Transitioning from "just writing code" to designing systems with version control strategies and iterative refinement.
 
-## 🤖 AI-Augmented Workflow
+## 🏗️ Architecture & Technical Specs
 
-This project leverages Artificial Intelligence as a **governed force multiplier**, not a replacement for engineering judgment.
-
-- **Role of AI:** Accelerated boilerplate generation, documentation drafting, and rapid prototyping of UI layouts.
-- **Human Oversight:** All architectural decisions, logic verification, and code reviews were performed manually to ensure security and efficiency.
-- **Outcome:** This workflow demonstrates how modern engineers can use AI tools to reduce friction and focus on high-level problem solving.
-
-## ⚡ Key Features
-
-- **Responsive UI:** Built with **React + Vite** and styled with **Tailwind CSS** for a mobile-first experience.
-- **RESTful API:** A robust **Express** backend handling CRUD operations with validated endpoints.
-- **Persistence:** Lightweight yet powerful data management using **SQLite**, optimized for local development and portability.
-- **Scalable Structure:** Modular file organization (`/components`, `/pages`, `/routes`, `/controllers`) facilitating future feature expansion.
-## 🏗️ Architecture Overview
-
-The system follows a classic client-server model, ensuring a clear **separation of concerns** between the presentation (React) and the business/persistence layers (Express/SQLite).
+The project is split into two distinct ecosystems. While the integration bridge between them remains a work-in-progress, each "island" follows professional structural standards.
 
 ```tree
 root/
-├── frontend/                     # React Single Page Application (Vite)
-│   ├── src/components/           # Reusable UI atoms and molecules
-│   ├── src/pages/                # View logic, handles state and routing
-│   └── src/services/             # API integration layer (interacts with the backend)
-├── backend/                      # Express API
-│   ├── routes/                   # Endpoint definitions and request handling
-│   ├── controllers/              # Business logic (processes requests)
-│   └── db/                       # Database connection, schema, and setup (SQLite)
-└── LICENSE                       # MIT License file
+├── frontend/                 # React Single Page Application (Vite)
+│   ├── src/components/       # Reusable UI atoms and molecules
+│   ├── src/pages/            # View logic and routing
+│   └── src/services/         # API integration layer (Conceptual)
+├── backend/                  # Express API
+│   ├── routes/               # Endpoint definitions
+│   ├── controllers/          # Business logic and request processing
+│   └── db/                   # SQLite schema and setup
+└── LICENSE                   # MIT License
 ```
 
-## ✨ Prerequisites
+### 🔹 Frontend (React + Vite + Tailwind)
 
-Before getting started, ensure you have the following installed:
+* **State Management:** Initialized with React Hooks to handle local UI state and component lifecycle efficiently.
+* **Atomic Design:** Organized into reusable components (atoms/molecules) to facilitate UI consistency and future expansion.
+* **Styling:** Utility-first CSS via **Tailwind**, ensuring a fully responsive, mobile-first experience with minimal custom CSS overhead.
 
-* **Node.js 20 or higher.**
-* **npm 10 or higher.**
+### 🔹 Backend (Node.js + Express + SQLite)
 
-> 💡 **Note:** Each package (`frontend` and `backend`) acts as a separate logical unit. Installation must be run within both directories.
-
-## 🚀 Getting Started
-
-1.  **Clone the repository**
-    ```bash
-    git clone [https://github.com/CarlosFdeezz/fintrix.git](https://github.com/CarlosFdeezz/fintrix.git)
-    cd fintrix
-    ```
-
-2.  **Install dependencies**
-    ```bash
-    cd backend
-    npm install
-    cd ../frontend
-    npm install
-    ```
-
-3.  **Start the API** (port 3001 by default)
-    ```bash
-    cd backend
-    node index.js
-    ```
-
-4.  **Run the frontend in development mode** (port 5173 by default)
-    ```bash
-    cd frontend
-    npm run dev
-    ```
-
-5.  **Open the browser at** `http://localhost:5173` and start exploring Fintrix.
-
-## 🔧 Useful Scripts
-
-### Backend
-* `node index.js`: starts the Express server and creates the database if it does not exist.
-
-### Frontend
-* `npm run dev`: development server with hot reload.
-* `npm run build`: generates the optimized production build.
-* `npm run preview`: previews the local production build.
-* `npm run lint`: runs ESLint over `.js` and `.jsx` files.
-* `npm run test`: runs the Vitest test suite.
-
-## 🗺️ Suggested Roadmap
-
-This is a living project. Future iterations will focus on scaling functionality and improving the developer experience:
-
-* [ ] Design a basic authentication system (e.g., JWT).
-* [ ] Integrate visualizations (charts and reports) based on recorded expenses.
-* [ ] Add advanced filters and data export (e.g., CSV/JSON).
-* [ ] Prepare deployment scripts (e.g., Docker / managed services).
-* [ ] Document technical decisions and lessons learned in every release.
-
-## 🤝 Contributing
-
-Pull requests are welcome for educational discussions. Please open an issue to propose significant changes.
-
-## 📄 License
-
-This project is licensed under the [MIT License](./LICENSE).
+* **Database:** Structured **SQLite** schema for lightweight, serverless, and portable data management.
+* **Routing:** Modular route definitions for `Transactions` and `Categories`, following RESTful conventions.
+* **Validation:** Implementation of controller-level logic to handle CRUD operations and basic error responses.
 
 ---
 
+## 🤖 AI-Augmented Workflow
+
+This project leveraged Artificial Intelligence as a **governed force multiplier**, not a replacement for engineering judgment.
+
+* **Role of AI:** Accelerated boilerplate generation, documentation drafting, and rapid prototyping of UI layouts.
+* **Human Oversight:** All architectural decisions, logic verification, and code reviews were performed manually to ensure security and efficiency.
+* **Outcome:** This workflow demonstrates my ability to use modern AI tools to reduce friction and focus on high-level problem solving.
+
+---
+
+## 🚀 How to Explore
+
+Since this is a prototype, you can explore the codebases separately to review the structure and code quality:
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/CarlosFdeezz/protopay.git
+cd protopay
+```
+
+
+2. **Explore the UI**
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+
+3. **Explore the API Logic**
+```bash
+cd backend
+npm install
+node index.js
+```
+
+---
+
+## 🗺️ Archive Notes
+
+This project is no longer actively maintained. It stands as a milestone of my transition into Full-Stack engineering, showcasing my ability to architect complex systems and my commitment to continuous learning through building.
+
 <div align="center">
-  <sub>This project reflects my commitment to learning by building. Designed & Developed by <a href="https://github.com/CarlosFdeezz">Carlos Fernández Cabeza</a></sub>
+<sub>Designed & Developed by <a href="[https://github.com/CarlosFdeezz](https://github.com/CarlosFdeezz)">Carlos Fernández Cabeza</a></sub>
 </div>
