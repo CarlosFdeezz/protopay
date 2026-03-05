@@ -27,15 +27,18 @@ The project is split into two distinct ecosystems. While the integration bridge 
 
 ```tree
 root/
-├── frontend/                 # React Single Page Application (Vite)
-│   ├── src/components/       # Reusable UI atoms and molecules
-│   ├── src/pages/            # View logic and routing
-│   └── src/services/         # API integration layer (Conceptual)
-├── backend/                  # Express API
-│   ├── routes/               # Endpoint definitions
-│   ├── controllers/          # Business logic and request processing
-│   └── db/                   # SQLite schema and setup
-└── LICENSE                   # MIT License
+├── frontend/                     # React Single Page Application (Vite)
+│   └── src/
+│       ├── components/           # Reusable UI atoms and molecules
+│       ├── pages/                # View logic and routing
+│       └── services/             # API integration layer
+└── backend/                      # Express REST API
+    ├── node_modules/             # Dependency resolution directory
+    ├── src/                      # Source code directory
+    │   ├── controllers/          # Request handling and business logic
+    │   ├── routes/               # API endpoint definitions
+    │   └── middleware/           # Request validation and authentication
+    └── data/                     # Persistent storage for SQLite files
 ```
 
 ### 🔹 Frontend (React + Vite + Tailwind)
