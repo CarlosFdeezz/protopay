@@ -36,8 +36,17 @@ Tooling: ESLint, Prettier, Vitest
 
 ## Run it
 
-cd frontend && npm install && npm run dev
-cd backend && npm install && node index.js
+```bash
+# Frontend
+cd frontend
+npm install
+npm run dev
+
+# Backend
+cd backend
+npm install
+node index.js
+```
 
 ---
 
