@@ -4,7 +4,7 @@ Full-stack prototype built to learn clean architecture hands-on.
 Not production software — an exercise in structure.
 
 ![React](https://img.shields.io/badge/Frontend-React-blue?style=flat-square)
-![Express]([badge](https://img.shields.io/badge/Backend-Express-green?style=flat-square))
+![Express](https://img.shields.io/badge/Backend-Express-green?style=flat-square)
 ![SQLite](https://img.shields.io/badge/Database-SQLite-lightgrey?style=flat-square)
 
 
