@@ -16,6 +16,7 @@ A payment dashboard with a React/Vite frontend and an Express/SQLite backend, co
 
 ## Architecture
 
+```
 frontend/
 ├── components/   # Reusable UI components
 ├── pages/        # Views and routing
@@ -25,6 +26,7 @@ backend/
 ├── controllers/  # Business logic
 ├── routes/       # Endpoint definitions
 └── middleware/   # Validation
+```
 
 ## Stack
 
