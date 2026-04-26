@@ -12,9 +12,7 @@ Not production software — an exercise in structure.
 
 ## What it is
 
-A payment dashboard with a React/Vite frontend and an Express/SQLite
-backend, connected through a RESTful API. The goal wasn't to ship a
-product but to practice separating concerns properly from the start.
+A payment dashboard with a React/Vite frontend and an Express/SQLite backend, connected through a RESTful API. The goal wasn't to ship a product but to practice separating concerns properly from the start.
 
 ## Architecture
 
